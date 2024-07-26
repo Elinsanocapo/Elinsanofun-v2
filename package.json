@@ -58,7 +58,7 @@
     "instantsearch.js": "^4.73.2",
     "ipaddr.js": "^2.2.0",
     "media-typer": "^0.3.0",
-    "merge-descriptors": "^1.0.1",
+    "merge-descriptors": "^2.0.0",
     "methods": "^1.1.2",
     "mime": "^4.0.4",
     "mime-db": "^1.52.0",
