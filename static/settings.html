@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
+    <title id="tab-title">Home</title>
+    <link rel="stylesheet" id="global" href="/assets/css/global.css?v=6" />
+    <link rel="stylesheet" href="/assets/css/container.css?v=2" />
+    <link rel="stylesheet" href="/assets/css/nav.css?v=2" />
+    <link rel="stylesheet" href="/assets/css/settings.css?v=4" />
+
+  </head>
+  <body>
+    <div class="fixed-nav-bar"></div>
+    <div class="main">
+      <div class="popup">
+        <h3>Theme Creator</h3>
+        <button class="export" id="export-theme">Export CSS</button>
+        <button class="import" id="import-theme-button">Import CSS</button>
+        <p>Change the background image</p>
+        <input type="text" id="background-input" placeholder="Enter image URL" />
+        <button class="green" id="save-button">Save Image</button>
+        <button id="upload-button">Upload Image</button>
+        <button id="black-button">Black Background</button>
+        <button id="white-button">White Background</button>
+        <button class="red" id="reset-button">Reset</button>
+        <p>Change the background color</p>
+        <input type="text" class="input-small" id="background-color-input" />
+        <p>Change the searchbar/input color</p>
+        <input type="text" class="input-small" id="input-color-input" />
+        <p>Change the app card color</p>
+        <input type="text" class="input-small" id="app-card-color-input" />
+        <p>Change the settings card color</p>
+        <input type="text" class="input-small" id="settings-card-color-input" />
+        <p>Change the color of buttons</p>
+        <input type="text" class="input-small" id="button-color-input" />
+        <p>Change the accent color of tabs</p>
+        <input type="text" class="input-small" id="tab-accent-color-input" />
+        <p>Change the background color of turned on sliders</p>
+        <input type="text" class="input-small" id="slider-active-color-input" />
+        <p>Change the background color of turned off sliders</p>
+        <input type="text" class="input-small" id="slider-inactive-color-input" />
+        <p>Change the color of our icon on the nav bar</p>
+        <button id="white-logo">White Logo</button>
+        <button id="black-logo">Black Logo</button>
+        <p>Change the primary color of text (Default Color: White)</p>
+        <input type="text" class="input-small" id="primary-text-color-input" />
+        <p>Change the color of dark text (Default Color: Gray)</p>
+        <input type="text" class="input-small" id="dark-text-color-input" />
+        <p>Change the color of placeholder text (Default Color: Light Gray)</p>
+        <input type="text" class="input-small" id="placeholder-text-color-input" />
+        <button onclick="ClosePopup()" id="save-theme">Save Theme</button>
+      </div>
+      <div class="settings-container">
+        <div class="settings-card">
+          <h3>About:Blank</h3>
+          <p>
+            Enmascarar el sitio en una página about:blank y activar about:blank al inicio (activado por defecto).
+          </p>
+          <div id="ab-settings">
+            <div id="ab-settings-container">
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  id="ab-settings-switch"
+                  class="slider-checkbox"
+                  onchange="toggleAB()" />
+                
+              </label>
+            </div>
+            <button onclick="AB()" class="key-button">Open About:Blank</button>
+
+          </div>
+        </div>
+        <div class="settings-card">
+          <h3>Tecla de escape</h3>
+          <p>
+            Abre rápidamente otro sitio con una sola pulsación. Se utiliza para redirecciones cuando se abre about:blank
+            abierto. Para varias pulsaciones, sepárelas con una coma. Ej. «A,B,C»
+          </p>
+          <input
+            type="text"
+            id="eventKeyInput"
+            placeholder="Panic Keys (comma separated)"
+            class="key-form" />
+          <input class="key-form" placeholder="Panic Link" type="text" id="linkInput" value />
+          <button class="key-button" value="Save" onclick="saveEventKey()">Save</button>
+        </div>
+        <div class="settings-card">
+          <h3>Cambiar el icono de la pagina</h3>
+          <p>elije uno de estos titulos.</p>
+          <select id="dropdown" onchange="handleDropdownChange(this)">
+            <option value="Classroom">Google Classroom</option>
+            <option value="Google">Google</option>
+            <option value="Google Meet">Google Meet</option>
+            <option value="Drive">Google Drive</option>
+            <option value="Google Docs">Google Docs</option>
+            <option value="Google Slides">Google Slides</option>
+            <option value="Gmail">Gmail</option>
+            <option value="Khan">Khan Academy</option>
+            <option value="Wikipedia">Wikipedia</option>
+
+            <option value="Google Forms Locked Mode">Google Forms - Locked Mode</option>
+            
+
+          </select>
+          <div>
+
+          </div>
+        </div>
+
+
+        <div class="settings-card">
+          <h3>Imformacion</h3>
+          <p>Version: v2</p>
+          <p id="last-updated">Ultima version de el insano</p>
+          <p>
+           
+          </p>
+          <p>
+             </a>con nuevas funciones
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/main.js?v=90"></script>
+    <script src="/assets/js/settings.js?v=8"></script>
+
+</html>

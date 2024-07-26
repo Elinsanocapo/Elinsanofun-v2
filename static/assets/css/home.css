@@ -1,0 +1,134 @@
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+    font-size: 10vh;
+    color: #FFFFFF; /* Color blanco */
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: 30vh;
+    margin-bottom: 5vh;
+    transition: 0.35s ease;
+    text-shadow: 2px 4px 6px rgb(255, 255, 255);
+}
+
+.title:hover {
+	transform: translateY(-5%) scale(1.03);
+	font-weight: 800;
+}
+
+@media (orientation: portrait) {
+	.title {
+		position: relative;
+		top: -10vw;
+		font-size: 10vw;
+		color: var(--text-primary);
+		font-family: "Inter", sans-serif;
+		text-align: center;
+		text-transform: uppercase;
+		border-radius: 0px 0px 5px 5px;
+	}
+}
+
+
+
+.input-container {
+    position: relative;
+    width: 220px; /* Ancho inicial del contenedor */
+    transition: width 0.6s ease; /* Transición más lenta para el cambio de ancho */
+}
+
+.main-search {
+    width: calc(100% - 40px); /* Ajusta el tamaño para incluir el icono */
+    height: 43px;
+    color: #FFF;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.5) !important; /* Fondo semitransparente */
+    font-size: 18px;
+    border-radius: 25px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    outline: none;
+    transition: border-color 0.6s ease, box-shadow 0.6s ease, width 0.6s ease; /* Transición más lenta */
+    padding-right: 40px; /* Espacio para el icono */
+}
+
+.main-search:focus,
+.main-search:active,
+.main-search:hover {
+    border-color: #FFF; /* Color del borde cuando se está enfocado o al pasar el ratón */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra al pasar el ratón */
+    background: rgba(0, 0, 0, 0.5) !important; /* Mantén el mismo fondo */
+}
+
+.main-search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para el botón de búsqueda */
+.input-container .search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para el icono de la lupa */
+.input-container .icon {
+    position: absolute;
+    right: 10px; /* Ajustado el margen para el icono */
+    top: 49%;
+    transform: translateY(-50%);
+    color: #FFF; /* Color blanco para el icono */
+    width: 24px; 
+    height: 24px;
+}
+
+/* Estilos para expandir el contenedor al pasar el ratón */
+.input-container:hover {
+    width: 300px; /* Ancho expandido al pasar el ratón */
+}
+
+
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0vw;
+	background-color: var(--bg-c);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	overflow: hidden;
+}
+
+.particles-js-canvas-el {
+	z-index: 0;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+#splash {
+	color: var(--text-dark);
+	margin-bottom: 1em;
+	margin-top: -2em;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+}
+
