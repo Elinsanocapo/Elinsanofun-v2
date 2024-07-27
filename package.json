@@ -1,9 +1,22 @@
+
 {
-  "name": "interstellar-main",
-  "version": "1.0.0",
-  "description": "<div align=\"center\">     <img src=\"https://raw.githubusercontent.com/UseInterstellar/Interstellar/main/.github/branding/in.png\">     <p>Serving over 8+ million users since 2023.<p>     <p>Interstellar is a web proxy with a Clean and Sleek UI and easy to use menus. Our goal is to provide the best user experience to everyone.</p> </div>",
-  "main": "index.js",
-  "dependencies": {
+	"name": "interstellar",
+	"version": "5.2.3",
+	"type": "module",
+	"engines": {
+		"npm": ">=7.0.0",
+		"node": ">=16.0.0"
+	},
+	"scripts": {
+		"start": "node index.js",
+		"format": "biome format --write .",
+		"precommit": "biome check --write .",
+		"lint": "biome lint --write ."
+	},
+	"author": "InterstellarNetwork",
+	"license": "GPL-3.0-or-later",
+	"dependencies": {
+    "@tomphttp/bare-server-node": "^2.0.3",
     "abbrev": "^1.1.1",
     "accepts": "^1.3.8",
     "algoliasearch": "^4.24.0",
@@ -97,12 +110,18 @@
     "utils-merge": "^1.0.1",
     "vary": "^1.1.2",
     "web-streams-polyfill": "^3.3.3",
-    "ws": "^8.17.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "ws": "^8.17.1",
+		"chalk": "^5.3.0",
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"express-basic-auth": "^1.2.1",
+		"mime": "^4.0.4",
+		"node-fetch": "^3.3.2"
+    
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3"
+	}
 }
