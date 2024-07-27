@@ -76,7 +76,7 @@
     "mime": "^4.0.4",
     "mime-db": "^1.52.0",
     "mime-types": "^2.1.35",
-    "mkdirp": "^0.3.0",
+    "mkdirp": "^3.0.1",
     "ms": "^2.0.0",
     "negotiator": "^0.6.3",
     "node-domexception": "^1.0.0",
